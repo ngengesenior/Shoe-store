@@ -60,7 +60,7 @@ class ShoeListFragment : Fragment() {
             shoesList.forEachIndexed { index, shoe ->
                 val textView = TextView(requireContext())
                 textView.id = index
-                val text = "Name:${shoe.name}\nSize:${shoe.size}\nCompany:${shoe.company}"
+                val text = "Name:${shoe.name}\nSize:${shoe.size}\nCompany:${shoe.company}\nDescription:${shoe.description}"
                 textView.text = text
                 textView.layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,FrameLayout.LayoutParams.WRAP_CONTENT)
                 textView.setPadding(12)
