@@ -41,6 +41,10 @@ class ShoeDetailFragment : Fragment() {
                     findNavController().navigate(action)
                 }
             }
+
+            buttonCancel.setOnClickListener {
+                findNavController().navigateUp()
+            }
         }
         return binding.root
     }
