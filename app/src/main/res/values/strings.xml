@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="welcome_title">Welcome to Udacity Shoe store</string>
+    <string name="welcome_detail">Get the best shoe deals at the cheapest prices on our store.</string>
+    <string name="get_instructions">Get Instructions</string>
+    <string name="shipping">Shipping</string>
+    <string name="shipping_info">We are currently doing free shipping and also giving a 10% discount when you buy shoes in bulk.</string>
+    <string name="go_to_store">Go to Store</string>
+    <string name="size">Size</string>
+    <string name="company">Company</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <string name="name">Name</string>
+    <string name="logout">Logout</string>
+    <string name="add_shoe">Add Shoe</string>
+    <string name="instructions">Instructions</string>
+    <string name="welcome">Welcome</string>
+    <string name="exit_note">Are you sure you want to exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
