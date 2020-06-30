@@ -15,6 +15,7 @@ import com.udacity.shoestore.viewmodels.ShoesViewModel
 
 class ShoeDetailFragment : Fragment() {
     private val shoesViewModel:ShoesViewModel by activityViewModels()
+    private val shoeDetail:Shoe = Shoe("",0.0,"","")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -28,18 +29,21 @@ class ShoeDetailFragment : Fragment() {
         val binding: FragmentShoeDetailBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_shoe_detail,container,false)
         binding.lifecycleOwner = this
         binding.vModel = shoesViewModel
+        binding.shoe = shoeDetail
         with(binding){
             buttonSave.setOnClickListener {
-                val name = nameText.text.toString()
-                val company = companyText.text.toString()
-                val size = sizeText.text.toString()
-                val description = descriptionText.text.toString()
-                if (name.isNotEmpty() && company.isNotEmpty() && size.isNotEmpty() && description.isNotEmpty()) {
+                shoeDetail?.description
+                shoeDetail?.company = companyText.text.toString()
+                shoeDetail?.size = sizeText.text.toString().toDouble()
+                shoeDetail?.description = descriptionText.text.toString()
+                shoesViewModel.addShoe(shoeDetail)
+                val action = ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment()
+                findNavController().navigate(action)
+                /*if (name.isNotEmpty() && company.isNotEmpty() && size.isNotEmpty() && description.isNotEmpty()) {
                     val shoe = Shoe(name=name,company = company,size = size.toDouble(),description = description)
                     shoesViewModel.addShoe(shoe)
-                    val action = ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment()
-                    findNavController().navigate(action)
-                }
+
+                }*/
             }
 
             buttonCancel.setOnClickListener {

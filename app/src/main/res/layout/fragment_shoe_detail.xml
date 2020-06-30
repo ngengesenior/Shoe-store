@@ -7,6 +7,9 @@
         <variable
             name="vModel"
             type="com.udacity.shoestore.viewmodels.ShoesViewModel" />
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
 
     </data>
 
@@ -32,6 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
+                android:text="@={shoe.name}"
                 android:maxLines="1"
                 android:layout_marginTop="@dimen/dimen_24"
                 android:hint="@string/name" />
@@ -54,6 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_24"
                 android:hint="@string/size"
+                android:text="@{String.valueOf(shoe.size)}"
                 android:imeOptions="actionNext"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -76,6 +81,7 @@
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
                 android:layout_marginTop="@dimen/dimen_24"
+                android:text="@={shoe.company}"
                 android:hint="@string/company" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,6 +102,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
                 android:layout_marginTop="@dimen/dimen_24"
+                android:text="@={shoe.description}"
                 android:hint="@string/description" />
         </com.google.android.material.textfield.TextInputLayout>
 
